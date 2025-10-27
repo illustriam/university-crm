@@ -52,14 +52,6 @@ export const SettingsSecurity = () => {
             <H2Title
               title={t`SSO`}
               description={t`Configure an SSO connection`}
-              adornment={
-                <Tag
-                  text={t`Enterprise`}
-                  color="transparent"
-                  Icon={IconLock}
-                  variant="border"
-                />
-              }
             />
             <SettingsSSOIdentitiesProvidersListCard />
           </StyledSection>
