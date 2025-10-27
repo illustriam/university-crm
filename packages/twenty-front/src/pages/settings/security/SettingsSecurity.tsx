@@ -11,8 +11,7 @@ import { SubMenuTopBarContainer } from '@/ui/layout/page/components/SubMenuTopBa
 import { useRecoilValue } from 'recoil';
 import { SettingsPath } from 'twenty-shared/types';
 import { getSettingsPath } from 'twenty-shared/utils';
-import { Tag } from 'twenty-ui/components';
-import { H2Title, IconLock } from 'twenty-ui/display';
+import { H2Title } from 'twenty-ui/display';
 import { Section } from 'twenty-ui/layout';
 
 const StyledContainer = styled.div`
