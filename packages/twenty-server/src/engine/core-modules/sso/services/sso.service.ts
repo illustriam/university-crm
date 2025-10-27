@@ -36,18 +36,10 @@ export class SSOService {
     private readonly exceptionHandlerService: ExceptionHandlerService,
   ) {}
 
-  private async isSSOEnabled(workspaceId: string) {
-    const isSSOBillingEnabled = await this.billingService.hasEntitlement(
-      workspaceId,
-      this.featureLookUpKey,
-    );
-
-    if (!isSSOBillingEnabled) {
-      throw new SSOException(
-        `No entitlement found for this workspace`,
-        SSOExceptionCode.SSO_DISABLE,
-      );
-    }
+  private async isSSOEnabled(workspaceId?: string) {
+    // Allow SSO for all workspaces (removed enterprise restriction)
+    // No need to check billing entitlements - SSO is free in your fork!
+    return true;
   }
 
   private async getIssuerForOIDC(issuerUrl: string) {
